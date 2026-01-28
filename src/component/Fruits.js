@@ -13,7 +13,7 @@ const Fruits = () => {
   const loadData = () => {
     // 비동기 통신 사용
     axios
-      .get('http://localhost:9070/fruits')
+      .get('https://port-0-backend-express-server-mkvwcttqba8659cb.sel3.cloudtype.app/fruits')
       // 성공시 데이터를 저장
       .then(res => {
         setData(res.data);
@@ -34,7 +34,7 @@ const Fruits = () => {
   const deleteData = (num) => {
     if (window.confirm('정말 삭제하시겠습니까?')) {
       axios
-        .delete(`http://localhost:9070/fruits/${num}`)
+        .delete(`https://port-0-backend-express-server-mkvwcttqba8659cb.sel3.cloudtype.app/fruits/${num}`)
         .then(() => { // 성공시
           alert('삭제되었습니다.');
           loadData(); // 삭제 후 다시 불러와서 목록을 새로고침

@@ -18,7 +18,7 @@ const NoodleUpdate = () => {
 
   // 조회
   useEffect(() => {
-    axios.get(`http://localhost:9070/noodle/${num}`)
+    axios.get(`https://port-0-backend-express-server-mkvwcttqba8659cb.sel3.cloudtype.app/noodle/${num}`)
       .then(res => {
         console.log('성공 : ', res)
         setInput(res.data)
@@ -37,7 +37,7 @@ const NoodleUpdate = () => {
   const inputSubmit = (e) => {
     e.preventDefault();
 
-    axios.put(`http://localhost:9070/noodle/noodleupdate/${num}`, input)
+    axios.put(`https://port-0-backend-express-server-mkvwcttqba8659cb.sel3.cloudtype.app/noodle/noodleupdate/${num}`, input)
       .then(() => {
         alert('수정 완료되었습니다.');
         navigate('/noodle');

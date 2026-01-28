@@ -10,7 +10,7 @@ const Noodle = () => {
 
   // 2. 비동기통신을 함수에 담기
   const loadData = () => {
-    axios.get('http://localhost:9070/noodle')
+    axios.get('https://port-0-backend-express-server-mkvwcttqba8659cb.sel3.cloudtype.app/noodle')
       .then(res => setData(res.data))
       .catch(err => console.log(err))
   }
@@ -23,7 +23,7 @@ const Noodle = () => {
   // 4. 데이터 삭제 함수
   const dataDelete = (num) => {
     if (window.confirm('선택하신 제품을 삭제하시겠습니까?')) {
-      axios.delete(`http://localhost:9070/noodle/${num}`)
+      axios.delete(`https://port-0-backend-express-server-mkvwcttqba8659cb.sel3.cloudtype.app/noodle/${num}`)
         .then(() => {
           alert('삭제되었습니다.')
           loadData(); // 목록 갱신

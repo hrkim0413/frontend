@@ -33,7 +33,7 @@ const Join = () => {
     }
 
     try {
-      await axios.post('http://localhost:9070/register', form)
+      await axios.post('https://port-0-backend-express-server-mkvwcttqba8659cb.sel3.cloudtype.app/register', form)
 
       setSuccess('회원가입이 완료되었습니다.');
 

@@ -19,7 +19,7 @@ const FruitsUpdate = () => {
   // 서버측에 넘길 num값을 비동기로 통신하여 성공, 실패여부를 출력하고
   // 컴포넌트가 마운트 될 때 해당 num값에 데이터를 조회하여 출력함
   useEffect(() => {
-    axios.get(`http://localhost:9070/fruits/${num}`)
+    axios.get(`https://port-0-backend-express-server-mkvwcttqba8659cb.sel3.cloudtype.app/fruits/${num}`)
       // 성공이면
       .then(res => {
         console.log('서버 응답 값 : ', res.data);
@@ -42,7 +42,7 @@ const FruitsUpdate = () => {
     e.preventDefault();
 
     // 비동기방식으로 업데이트할 내용을 백엔드로 전달함
-    axios.put(`http://localhost:9070/fruits/fruitsupdate/${num}`, {
+    axios.put(`https://port-0-backend-express-server-mkvwcttqba8659cb.sel3.cloudtype.app/fruits/fruitsupdate/${num}`, {
       name: form.name,
       price: form.price,
       color: form.color,

@@ -12,15 +12,15 @@ export function AlertProvider({ children }) {
   const [userCount, setUserCount] = useState(0);
 
   useEffect(() => { // 한번에 badge 데이터를 불러옴
-    axios.get('http://localhost:9070/goods')
+    axios.get('https://port-0-backend-express-server-mkvwcttqba8659cb.sel3.cloudtype.app/goods')
       .then(res => setGoodsCount(res.data.length))
-    axios.get('http://localhost:9070/fruits')
+    axios.get('https://port-0-backend-express-server-mkvwcttqba8659cb.sel3.cloudtype.app/fruits')
       .then(res => setFruitsCount(res.data.length))
-    axios.get('http://localhost:9070/bookstore')
+    axios.get('https://port-0-backend-express-server-mkvwcttqba8659cb.sel3.cloudtype.app/bookstore')
       .then(res => setBookstoreCount(res.data.length))
-    axios.get('http://localhost:9070/question')
+    axios.get('https://port-0-backend-express-server-mkvwcttqba8659cb.sel3.cloudtype.app/question')
       .then(res => setQuestionCount(res.data.length))
-    axios.get('http://localhost:9070/usercount')
+    axios.get('https://port-0-backend-express-server-mkvwcttqba8659cb.sel3.cloudtype.app/usercount')
       .then(res => setUserCount(res.data.length))
   }, [])
 

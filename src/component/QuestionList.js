@@ -9,7 +9,7 @@ const QuestionList = () => {
 
   // 2. 문의하기 등록된 글 가져오기
   const loadData = () => {
-    axios.get('http://localhost:9070/question') // 백엔드 서버에 주소 요청
+    axios.get('https://port-0-backend-express-server-mkvwcttqba8659cb.sel3.cloudtype.app/question') // 백엔드 서버에 주소 요청
       .then(res => { // 성공시 데이터 저장
         setData(res.data);
         setQuestionCount(res.data.length);

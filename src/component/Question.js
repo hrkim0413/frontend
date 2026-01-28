@@ -38,7 +38,7 @@ const Question = () => {
     }
 
     // 4. 전송하기(비동기로)
-    axios.post('http://localhost:9070/api/question', formData)
+    axios.post('https://port-0-backend-express-server-mkvwcttqba8659cb.sel3.cloudtype.app/api/question', formData)
       .then((res) => {
         alert('문의사항이 접수되었습니다.');
         // setQuestionCount(count => count + 1);

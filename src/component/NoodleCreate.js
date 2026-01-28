@@ -25,7 +25,7 @@ const NoodleCreate = () => {
   const inputSubmit = (e) => {
     e.preventDefault();
 
-    axios.post('http://localhost:9070/noodle', input)
+    axios.post('https://port-0-backend-express-server-mkvwcttqba8659cb.sel3.cloudtype.app/noodle', input)
       .then(() => {
         alert('제품이 등록 완료되었습니다.');
         setNoodleCount(count => count + 1);

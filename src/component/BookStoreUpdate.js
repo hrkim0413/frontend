@@ -22,7 +22,7 @@ function BookStoreUpdate(props) {
 
   // 3. 비동기 방식으로 데이터 가져오기(조회)
   useEffect(() => {
-    axios.get(`http://localhost:9070/bookstore/${code}`)
+    axios.get(`https://port-0-backend-express-server-mkvwcttqba8659cb.sel3.cloudtype.app/bookstore/${code}`)
       .then(res => { // 성공이면
         console.log('서버 응답 값 : ', res.data);
         setForm(res.data)
@@ -47,7 +47,7 @@ function BookStoreUpdate(props) {
     e.preventDefault(); // 새로고침 방지
 
     // 비동기방식으로 업데이트할 내용을 백엔드로 전달함
-    axios.put(`http://localhost:9070/bookstore/bookstoreupdate/${code}`, {
+    axios.put(`https://port-0-backend-express-server-mkvwcttqba8659cb.sel3.cloudtype.app/bookstore/bookstoreupdate/${code}`, {
       name: form.name,
       area1: form.area1,
       area2: form.area2,

@@ -25,7 +25,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post('http://localhost:9070/login', form);
+      const res = await axios.post('https://port-0-backend-express-server-mkvwcttqba8659cb.sel3.cloudtype.app/login', form);
 
       // 사용자 인증이 끝나면 '토큰'을 발급한다.
       localStorage.setItem('token', res.data.token);
@@ -39,7 +39,7 @@ const Login = () => {
 
   const loadData = async () => {
     try {
-      const res = await axios.get('http://localhost:9070/usercount');
+      const res = await axios.get('https://port-0-backend-express-server-mkvwcttqba8659cb.sel3.cloudtype.app/usercount');
 
       setUserCount(res.data.length);
     } catch (err) {
