@@ -25,7 +25,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post('https://port-0-backend-express-server-mkvwcttqba8659cb.sel3.cloudtype.app/login', form);
+      const res = await axios.post('https://port-0-backend-express-server-mkvwcttqba8659cb.sel3.cloudtype.app/frontend-login', form);
 
       // 사용자 인증이 끝나면 '토큰'을 발급한다.
       localStorage.setItem('token', res.data.token);
@@ -133,5 +133,6 @@ const Login = () => {
     </>
   );
 };
+
 
 export default Login;
